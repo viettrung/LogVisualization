@@ -1,0 +1,86 @@
+{
+    "type": "Ext.app.ViewModel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dateareachart",
+        "designer|userClassName": "HourAreaChartViewModel1"
+    },
+    "name": "HourAreaChartViewModel1",
+    "designerId": "c826036f-bc57-436f-8c93-a87c6d5a0b9b",
+    "cn": [
+        {
+            "type": "jsonstore",
+            "reference": {
+                "name": "stores",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": false,
+                "name": "dateStore"
+            },
+            "name": "MyJsonStore1",
+            "designerId": "8e8f3468-f1d9-4850-961a-95892427b0f1",
+            "cn": [
+                {
+                    "type": "Ext.data.proxy.Ajax",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "url": "/dateController/getCounts"
+                    },
+                    "name": "MyAjaxProxy",
+                    "designerId": "07ccb729-0591-4847-8f25-5660b04d2529",
+                    "cn": [
+                        {
+                            "type": "Ext.data.reader.Json",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "rootProperty": "records"
+                            },
+                            "name": "MyJsonReader1",
+                            "designerId": "6d67097c-ad8b-48d8-a51f-9de43f935b38"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "numOfRequest"
+                    },
+                    "name": "MyField19",
+                    "designerId": "4b9ea96e-f4b7-4185-9953-39dfbd230d2c"
+                },
+                {
+                    "type": "Ext.data.field.Field",
+                    "reference": {
+                        "name": "fields",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "name": "date"
+                    },
+                    "name": "MyField",
+                    "designerId": "aed61cbc-56dc-4194-8198-ef826abdd795"
+                }
+            ]
+        }
+    ]
+}

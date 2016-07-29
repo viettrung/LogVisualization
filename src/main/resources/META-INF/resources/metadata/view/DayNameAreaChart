@@ -1,0 +1,142 @@
+{
+    "type": "Ext.chart.CartesianChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "colors": null,
+        "designer|userAlias": "daynameareachart",
+        "designer|userClassName": "DayNameAreaChart",
+        "insetPadding": [
+            "40"
+        ],
+        "padding": "10 0 0 0",
+        "store": [
+            "{dayNameStore}"
+        ]
+    },
+    "name": "DateAreaChart1",
+    "configAlternates": {
+        "store": "binding"
+    },
+    "designerId": "d4ff1c21-6d3f-4a89-9426-103f65c4a1e2",
+    "isBuiltIn": true,
+    "iconCls": "icon-area-chart",
+    "autoName": "MyAreaChart",
+    "viewControllerInstanceId": "d717f3e0-bc66-4dc4-ad95-4e9e53043f40",
+    "viewModelInstanceId": "fb54cb3e-87ca-48ba-8e97-df238c2aa41a",
+    "cn": [
+        {
+            "type": "Ext.chart.axis.Category",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "dayName"
+                ],
+                "grid": true,
+                "label": [
+                    "{rotate: {",
+                    "                    degrees: -45",
+                    "                }}"
+                ],
+                "title": [
+                    "Day Name"
+                ]
+            },
+            "name": "MyCategoryAxis1",
+            "configAlternates": {
+                "grid": "boolean"
+            },
+            "designerId": "2cad799b-0cef-4066-b3b7-95e20500edfb"
+        },
+        {
+            "type": "Ext.chart.axis.Numeric",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "percentage"
+                ],
+                "grid": [
+                    "true"
+                ],
+                "position": "left",
+                "title": [
+                    "Percent",
+                    ""
+                ]
+            },
+            "name": "MyNumericAxis1",
+            "designerId": "505d9f10-8267-4414-901c-2aaf23cf5c22",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "label",
+                            "layout",
+                            "lastLabel"
+                        ],
+                        "fn": "renderer",
+                        "implHandler": [
+                            "return label + '%';"
+                        ]
+                    },
+                    "name": "renderer",
+                    "designerId": "52c16715-3936-4723-8bb6-42d8d8231bdd"
+                }
+            ]
+        },
+        {
+            "type": "Ext.chart.series.Area",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "marker": null,
+                "tooltip": [
+                    "{",
+                    "    trackMouse: true,",
+                    "    style: 'background: #FFF',",
+                    "    height: 20,",
+                    "    renderer: function(storeItem, item) {",
+                    "        this.setTitle(storeItem.get('dayName') + ': ' + storeItem.get('percentage') + '%');",
+                    "    }",
+                    "}"
+                ],
+                "xField": "dayName",
+                "yField": [
+                    "percentage"
+                ]
+            },
+            "name": "MyAreaSeries1",
+            "designerId": "f1f72ea3-5bce-4f2f-8878-3c1f29e99968"
+        },
+        {
+            "type": "Ext.chart.interactions.PanZoom",
+            "reference": {
+                "name": "interactions",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPanZoomInteraction",
+            "designerId": "0ad6c9f5-aecd-4c18-b990-0dae8b9771db"
+        }
+    ]
+}

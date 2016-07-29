@@ -1,0 +1,146 @@
+{
+    "type": "Ext.chart.CartesianChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "domainchart",
+        "designer|userClassName": "DomainChart",
+        "height": null,
+        "insetPadding": [
+            "40"
+        ],
+        "padding": "10 0 0 0",
+        "store": [
+            "{domainStore}"
+        ],
+        "width": null
+    },
+    "name": "ColumnChart",
+    "configAlternates": {
+        "store": "binding"
+    },
+    "designerId": "5d69caab-6ac8-46f2-af4d-281b47561d5f",
+    "isBuiltIn": true,
+    "iconCls": "icon-column-chart",
+    "autoName": "ColumnChart",
+    "viewControllerInstanceId": "50d7b4ed-9729-4864-aa80-f72eb9be4cd5",
+    "viewModelInstanceId": "69b13c74-0399-4979-969a-fe896ea8810f",
+    "cn": [
+        {
+            "type": "Ext.chart.axis.Category",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "accessURLDomain"
+                ],
+                "grid": true,
+                "label": [
+                    "{",
+                    "    rotate: {",
+                    "        degrees: -45",
+                    "    }",
+                    "}"
+                ],
+                "title": [
+                    "Domain",
+                    ""
+                ]
+            },
+            "name": "MyCategoryAxis",
+            "configAlternates": {
+                "grid": "boolean"
+            },
+            "designerId": "a04a0c48-0e3f-429a-95cd-75cf4de58a22"
+        },
+        {
+            "type": "Ext.chart.axis.Numeric",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "percentage"
+                ],
+                "grid": true,
+                "position": "left",
+                "title": [
+                    "Percent",
+                    ""
+                ]
+            },
+            "name": "MyNumericAxis",
+            "configAlternates": {
+                "grid": "boolean"
+            },
+            "designerId": "99558f6d-523d-4626-894f-85b2493743bc",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "label",
+                            "layout",
+                            "lastLabel"
+                        ],
+                        "fn": "renderer",
+                        "implHandler": [
+                            "return label + '%';"
+                        ]
+                    },
+                    "name": "renderer",
+                    "designerId": "26d290cc-581e-4b3c-9eb2-c2f3f6ad0ae2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.chart.series.Bar",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "highlight": [
+                    "{",
+                    "    fill: '#000',",
+                    "    'stroke-width': 20,",
+                    "    stroke: '#fff'",
+                    "}"
+                ],
+                "style": [
+                    "{opacity: 0.8}"
+                ],
+                "tooltip": [
+                    "{",
+                    "    trackMouse: true,",
+                    "    style: 'background: #FFF',",
+                    "    height: 20,",
+                    "    renderer: function(storeItem, item) {",
+                    "        this.setTitle(storeItem.get('accessURLDomain') + ': ' + storeItem.get('percentage') + '%');",
+                    "    }",
+                    "}"
+                ],
+                "xField": "accessURLDomain",
+                "yField": [
+                    "percentage"
+                ]
+            },
+            "name": "MyBarSeries",
+            "designerId": "c297e343-1dd1-4df9-827b-6b93b60111d1"
+        }
+    ]
+}

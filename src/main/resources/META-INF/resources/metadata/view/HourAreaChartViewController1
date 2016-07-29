@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dateareachart",
+        "designer|userClassName": "HourAreaChartViewController1"
+    },
+    "name": "HourAreaChartViewController1",
+    "designerId": "a1ec22d0-4dae-4912-94c7-42626d06f32a"
+}

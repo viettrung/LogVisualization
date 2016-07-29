@@ -1,0 +1,70 @@
+{
+    "name": "resources",
+    "settings": {
+        "cmd": {
+            "license": "commercial"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "lockUrlPrefix": true,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 339,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "ext51",
+    "viewOrderMap": {
+        "view": [
+            "a705110d-4ce3-4545-a748-7f920677364e",
+            "d77e9686-fe86-4d30-bd36-7e3bd52cfa59",
+            "b3b9ee8b-b1d5-4b04-95eb-7b2473518f97",
+            "5655e6ed-020c-4ecf-8e10-33a2e8bc72df",
+            "20480209-5087-4cfb-bb21-8f8911d0579b",
+            "75cc6678-b272-4c9a-b927-1a3a3a6b4662",
+            "9209aa47-e8da-4444-83a4-746c6e82b56a",
+            "8679e5f3-940b-4928-b85d-71741ae25c8b",
+            "bc7d8f6b-9ae5-4f16-b6a1-97bd206c0511",
+            "5d69caab-6ac8-46f2-af4d-281b47561d5f",
+            "97a0c0bb-0424-45aa-b97b-f8073e981e01",
+            "69b13c74-0399-4979-969a-fe896ea8810f",
+            "2d5c76c1-5370-4640-ae7f-290679a24841",
+            "50d7b4ed-9729-4864-aa80-f72eb9be4cd5",
+            "743613f6-a42b-4dba-b4cf-4b60e2165148",
+            "fcb46cca-dcb4-42d3-a3d2-eccd6ba8868c",
+            "0da2228e-5eb7-49be-9862-836ecb5844e5",
+            "d4ff1c21-6d3f-4a89-9426-103f65c4a1e2",
+            "c4044d4f-bba7-4a21-ab12-99f51f8c8323",
+            "c826036f-bc57-436f-8c93-a87c6d5a0b9b",
+            "fb54cb3e-87ca-48ba-8e97-df238c2aa41a",
+            "83a56138-b47d-4426-8b33-c540e22435ff",
+            "a1ec22d0-4dae-4912-94c7-42626d06f32a",
+            "d717f3e0-bc66-4dc4-ad95-4e9e53043f40"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "78dfd286-f2d0-4843-9e8f-c71156230a59",
+            "a91c91ff-cbab-4b33-89c3-38d1ed7b18c5",
+            "a4abba21-9d0b-465b-848d-49c3a08ebce7"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
