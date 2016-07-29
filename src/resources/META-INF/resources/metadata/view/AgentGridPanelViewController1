@@ -1,0 +1,14 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "loggridpanel",
+        "designer|userClassName": "AgentGridPanelViewController1"
+    },
+    "name": "AgentGridPanelViewController1",
+    "designerId": "bc7d8f6b-9ae5-4f16-b6a1-97bd206c0511"
+}

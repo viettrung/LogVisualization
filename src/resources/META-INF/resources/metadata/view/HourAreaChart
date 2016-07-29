@@ -1,0 +1,165 @@
+{
+    "type": "Ext.chart.CartesianChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "colors": null,
+        "designer|userAlias": "hourareachart",
+        "designer|userClassName": "HourAreaChart",
+        "insetPadding": [
+            "40"
+        ],
+        "padding": "10 0 0 0",
+        "store": [
+            "{hourStore}"
+        ]
+    },
+    "name": "MyAreaChart",
+    "configAlternates": {
+        "store": "binding"
+    },
+    "designerId": "fcb46cca-dcb4-42d3-a3d2-eccd6ba8868c",
+    "isBuiltIn": true,
+    "iconCls": "icon-area-chart",
+    "autoName": "MyAreaChart",
+    "viewControllerInstanceId": "83a56138-b47d-4426-8b33-c540e22435ff",
+    "viewModelInstanceId": "c4044d4f-bba7-4a21-ab12-99f51f8c8323",
+    "cn": [
+        {
+            "type": "Ext.chart.axis.Category",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "hour"
+                ],
+                "grid": true,
+                "label": [
+                    "{rotate: {",
+                    "                    degrees: -45",
+                    "                }}"
+                ],
+                "title": [
+                    "Hour of Time"
+                ]
+            },
+            "name": "MyCategoryAxis1",
+            "configAlternates": {
+                "grid": "boolean"
+            },
+            "designerId": "cdffa712-11dd-4f89-8642-f466fadad553",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "label",
+                            "layout",
+                            "lastLabel"
+                        ],
+                        "fn": "renderer",
+                        "implHandler": [
+                            "return label + 'h';"
+                        ]
+                    },
+                    "name": "renderer",
+                    "designerId": "f8f205a2-fd17-48b7-a9b9-65c46028ca84"
+                }
+            ]
+        },
+        {
+            "type": "Ext.chart.axis.Numeric",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "percentage"
+                ],
+                "grid": [
+                    "true"
+                ],
+                "position": "left",
+                "title": [
+                    "Percent"
+                ]
+            },
+            "name": "MyNumericAxis1",
+            "designerId": "c6d3f18a-8001-483c-b306-38a9af9f0254",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "label",
+                            "layout",
+                            "lastLabel"
+                        ],
+                        "fn": "renderer",
+                        "implHandler": [
+                            "return label + '%';"
+                        ]
+                    },
+                    "name": "renderer",
+                    "designerId": "b25651d3-5cc1-436d-9c90-ff5b45acf7aa"
+                }
+            ]
+        },
+        {
+            "type": "Ext.chart.series.Area",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "highlightCfg": null,
+                "marker": null,
+                "tooltip": [
+                    "{",
+                    "    trackMouse: true,",
+                    "    style: 'background: #FFF',",
+                    "    height: 20,",
+                    "    renderer: function(storeItem, item) {",
+                    "        this.setTitle(storeItem.get('hour') + 'h: ' + storeItem.get('percentage') + '%');",
+                    "    }",
+                    "}"
+                ],
+                "xField": "hour",
+                "yField": [
+                    "percentage"
+                ]
+            },
+            "name": "MyAreaSeries1",
+            "designerId": "6654945a-f2ac-4633-abd4-eab48bdf99f3"
+        },
+        {
+            "type": "Ext.chart.interactions.PanZoom",
+            "reference": {
+                "name": "interactions",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPanZoomInteraction",
+            "designerId": "1f11b428-8e1b-45c5-b842-5a83d02b6473"
+        }
+    ]
+}

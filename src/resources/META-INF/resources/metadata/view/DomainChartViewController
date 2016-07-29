@@ -1,0 +1,13 @@
+{
+    "type": "Ext.app.ViewController",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "domainchart",
+        "designer|userClassName": "DomainChartViewController"
+    },
+    "designerId": "50d7b4ed-9729-4864-aa80-f72eb9be4cd5"
+}
